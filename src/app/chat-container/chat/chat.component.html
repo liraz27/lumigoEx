@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="chat-cube">
+    <div class="chat-data">
+        <div class="msg" *ngFor="let text of texts">
+          {{text.userName}}: {{text.text}}
+        </div>
+    </div>
+  </div>
+  <div class="chat-input">
+    <input [(ngModel)]="newMessage" (keyup.enter)="send()" placeholder="message..."/>
+  </div>
+  <div class="chat-exit">
+      <div class="exit">exit</div>
+  </div>
+</div>
